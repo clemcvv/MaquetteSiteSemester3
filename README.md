@@ -11,7 +11,7 @@ Voici les commandes Git essentielles pour collaborer efficacement sur ce projet 
 ### 1. Cloner le dépôt
 Pour cloner le dépôt sur notre machine locale :
 ```bash
-git clone <URL_du_dépôt>
+git clone https://github.com/LaarMohamed/siteweb.git
 ```
 
 ### 2. Créer une branche
