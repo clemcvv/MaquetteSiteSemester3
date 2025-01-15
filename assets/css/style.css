@@ -15,6 +15,7 @@ body{
     background: fixed no-repeat  url("../img/background/backgroundimg.jpg");
     background-size: cover;
     font-family: 'AlbertSans';
+    overflow-x: hidden; /* pour éviter d'avoir des débordements sur l'axe x */
 }
 
 /* Séparation espace de travaille */
@@ -151,4 +152,77 @@ body{
 
 .email-container img:hover{
     transform: translateX(5px);
+}
+
+
+.slider-marque{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    overflow: hidden;
+    height: auto;
+}
+
+
+.button-marque {
+    width: 10%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+.slider-marque:hover .button-marque{
+    
+    animation-play-state: paused!important;
+}
+
+
+
+@keyframes scrollLeft {
+    to{
+        left: -10%;
+    }
+}
+.button-marque:nth-child(1) {
+    animation-delay: calc(30s / 10 * (10 - 1) * -1);
+}
+.button-marque:nth-child(2) {
+    animation-delay: calc(30s / 10 * (10 - 2) * -1);
+}
+.button-marque:nth-child(3) {
+    animation-delay: calc(30s / 10 * (10 - 3) * -1);
+}
+.button-marque:nth-child(4) {
+    animation-delay: calc(30s / 10 * (10 - 4) * -1);
+}
+.button-marque:nth-child(5) {
+    animation-delay: calc(30s / 10 * (10 - 5) * -1);
+}
+.button-marque:nth-child(6) {
+    animation-delay: calc(30s / 10 * (10 - 6) * -1);
+}
+.button-marque:nth-child(7) {
+    animation-delay: calc(30s / 10 * (10 - 7) * -1);
+}
+.button-marque:nth-child(8) {
+    animation-delay: calc(30s / 10 * (10 - 8) * -1);
+}
+.button-marque:nth-child(9) {
+    animation-delay: calc(30s / 10 * (10 - 9) * -1);
+}
+.button-marque:nth-child(10) {
+    animation-delay: calc(30s / 10 * (10 - 10) * -1);
 }
