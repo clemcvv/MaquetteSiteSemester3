@@ -36,14 +36,14 @@ Pour verifier si les fichiers ont bien été ajoutés `git status`
 ### 4. Créer un commit
 Une fois que vous avez ajouté vos modifications, effectuez un commit en décrivant brièvement ce que vous avez changé :
 ```bash
-git commit -m \"Description des changements\"
+git commit -m "Description des changements"
 ```
 
 #### Bonnes pratiques pour le commit
-- `feat(fichier) : ajout d'une nouvelle fonctionnalité\` — Pour l'ajout d'une fonctionnalité.
-- `fix(fichier): Correction d'un bug\` — Pour la correction d'un bug.
-- `test(fichier): Ajout ou modifications de tests\` — Pour les tests.
-- `style(fichier): Modification de style (sans impact fonctionnel)\` — Pour les changements visuels ou de mise en forme du code (ex : indentation, formatage).
+- `feat(fichier) : ajout d'une nouvelle fonctionnalité` — Pour l'ajout d'une fonctionnalité.
+- `fix(fichier): Correction d'un bug` — Pour la correction d'un bug.
+- `test(fichier): Ajout ou modifications de tests` — Pour les tests.
+- `style(fichier): Modification de style (sans impact fonctionnel)` — Pour les changements visuels ou de mise en forme du code (ex : indentation, formatage).
 
 ### 5. Envoyer les modifications sur le dépôt distant
 Envoyez vos changements sur la branche correspondante du dépôt distant :
