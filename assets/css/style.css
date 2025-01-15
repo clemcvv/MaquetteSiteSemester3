@@ -18,6 +18,124 @@ body{
     overflow-x: hidden; /* pour éviter d'avoir des débordements sur l'axe x */
 }
 
+/*<!-- ------------------------------------------------------>
+  <!-- ------------------- CSS HEADER ----------------------->
+  <!-- ------------------------------------------------------>*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.barNav { 
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Aligne tous les enfants verticalement au centre */
+    height: 100px; /* hauteur fixe */
+    width: 100%;
+}
+
+.logo{
+    color: black;
+    font-size: 65px;
+    margin: 0 0 0 50px;
+    display: flex;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    font-weight: 400; 
+}
+
+.barNav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 0 auto;
+    gap: 30px;
+    padding: 0%;
+    height: 100%; 
+    align-items: center; /* Assure que les éléments enfants sont centrés verticalement */
+    position: relative;
+}
+
+.barNav ul li {
+    list-style: none;
+    color: black;
+    display: flex;
+    align-items: center; 
+    font-family: 'AlbertSans';
+    font-weight: bold;
+    height: 100%; 
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+.barNav ul li:hover {
+    border-bottom: 5px solid #F4E500;
+}
+
+.barNav img {
+    padding-right: 50px;
+    cursor: pointer;
+    height: 35px;
+}
+
+.infoOuvertureHeader {
+   background-color: #F4E500;
+   padding: 10px;
+   border-radius: 10px;
+   margin: 0 15px;
+   font-size: 18px;
+}
+
+.searchContainer {
+    display: flex;
+}
+
+#searchForm input {
+    border: none;
+    border-bottom: solid 4px black;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#searchForm input::placeholder{
+    color: black;
+    font-size: 18px;
+}
+
+#searchForm input:focus {
+    outline: none;
+    color: black;
+}
+
+#searchBar {
+    opacity: 0;
+    display: none;
+}
+
+#searchBar.show {
+    opacity: 1;
+    display: block;
+}
+
+.infoExceptionnelle{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 8px 0;
+}
+
+.infoExceptionnelle p {
+    margin: 0;
+    text-align: center;
+    font-family: 'AlbertSans';
+    font-size: 16px;
+}
+
 /* Séparation espace de travaille */
 
 .shopping-selection{
