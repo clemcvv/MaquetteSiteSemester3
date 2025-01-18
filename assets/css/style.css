@@ -27,7 +27,9 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    transition: top 0.6s ease-in-out;
 }
+
 
 .barNav { 
     background-color: white;
@@ -136,6 +138,61 @@ body{
     font-size: 16px;
 }
 
+.deroulerHeader {
+    text-align: center;
+    display: none;
+}
+
+.deroulerHeader button{
+    border: none;
+    padding: 0 20px;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    cursor: pointer;
+}
+
+.deroulerHeader button:hover{
+    border-bottom: solid 3px white;
+    border-right: solid 3px white;
+    border-left: solid 3px white;
+}
+
+@media (max-width: 1024px) {
+
+    .logo{
+        margin: 0;
+    }
+
+    .barNav { 
+        flex-direction: column;
+        height: 300px; /* hauteur fixe */
+    }
+
+    .header {
+        top: -335px;
+    }
+
+    .barNav ul {
+        height: 50px; 
+        margin: 25px 0;
+    }
+
+    .barNav img {
+        margin: 25px 0;
+        padding-right: 0px;
+    }
+
+    #searchForm {
+        margin-top: 25px; 
+    }
+
+    .deroulerHeader {
+        display: block;
+    }
+    
+  }
+
+
 /* Séparation espace de travaille */
 
 .shopping-selection{
@@ -201,7 +258,6 @@ body{
 .tips{
     margin-top: 5%;
 }
-
 
 .box-jaune{
     margin-left: auto;
