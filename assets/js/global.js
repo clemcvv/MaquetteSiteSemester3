@@ -38,16 +38,66 @@ searchIcon.addEventListener('click', function(event) {
 // Soumission du formulaire de recherche
 searchForm.addEventListener('submit', submitSearchBar);
 
+// Récupérez les références
+const header = document.getElementById('header');
+const icon = document.getElementById('flecheIcon');
+
+// Chemins des images pour la flèche
+const downImage = "assets/img/header/flecheDown.svg";
+const upImage = "assets/img/header/flecheUp.svg";
+
+// Fonction pour basculer la visibilité de la barre de recherche
+function toggleVisibility(element, isVisible) {
+    if (isVisible) {
+        element.classList.remove('show');
+        element.style.opacity = 0;
+        element.style.display = "none";
+        return false;
+    } else {
+        element.classList.add('show');
+        element.style.opacity = 1;
+        element.style.display = "block";
+        return true;
+    }
+}
+
+// Gestion du clic sur le bouton déroulant
+document.getElementById('deroulerHeader').addEventListener('click', () => {
+    const currentSrc = icon.getAttribute('src');
+
+    if (currentSrc === downImage) {
+        icon.setAttribute('src', upImage);
+        header.style.top = "0px";
+    } else {
+        icon.setAttribute('src', downImage);
+        header.style.top = "-335px";
+    }
+});
+
 // Cacher la barre de recherche si l'on clique en dehors
-document.addEventListener('click', function(event) {
-    // Vérifie si le clic est en dehors de la barre de recherche et de l'icône
-    if (!searchBar.contains(event.target) && !searchIcon.contains(event.target)) {
-        // Si la barre est visible, la cacher
+document.addEventListener('click', function (event) {
+    if (searchBar && searchIcon && !searchBar.contains(event.target) && !searchIcon.contains(event.target)) {
         if (visibleSearchBar) {
             visibleSearchBar = toggleVisibility(searchBar, visibleSearchBar);
         }
     }
 });
+
+// Gestion du redimensionnement de la fenêtre
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) {
+        // Si la fenêtre est large, assurez-vous que le header est visible
+        header.style.top = "0px";
+        icon.setAttribute('src', downImage);
+    } else {
+        // Si la fenêtre est petite, masquez le header et affichez la flèche
+        header.style.top = "-335px";
+        icon.setAttribute('src', downImage);
+    }
+});
+
+
+
 
 //Séparation espace de travaille
 
