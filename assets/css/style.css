@@ -11,6 +11,11 @@
     src: url(../fonts/AlbertSans-Black.ttf);
 }
 
+
+:root {
+    --background-color: hwb(1 14% 9%);
+}
+
 body{
     background: fixed no-repeat  url("../img/background/backgroundimg.jpg");
     background-size: cover;
@@ -22,12 +27,13 @@ body{
   <!-- ------------------- CSS HEADER ----------------------->
   <!-- ------------------------------------------------------>*/
 
-.header {
+#header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transition: top 0.6s ease-in-out;
+    z-index: 10;
 }
 
 
@@ -191,6 +197,223 @@ body{
     }
     
   }
+
+/*<!-- ------------------------------------------------------>
+  <!-- ------------------- CSS PUB --------------------------->
+  <!-- ------------------------------------------------------>*/
+
+
+.Pub {
+    padding-top: 200px;
+    width: 100%;
+    max-height: 800px;
+    display: flex;
+    background-color: var(--background-color);
+}
+
+.imagePub {
+    width: 100%;
+
+}
+
+.ImagesGaucheContenu {
+    margin-right: 5%;
+    position: relative;
+}
+
+.boutonImagePub{
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+}
+
+.boutonRadioPub {
+    width: 16px;
+    height: 16px;
+    background-color: white; /* Couleur blanche par défaut */
+    border-radius: 50%; /* Optionnel : pour un look arrondi */
+    appearance: none; /* Supprime le style par défaut des inputs */
+    outline: none;
+    cursor: pointer;
+    opacity: 0.7; 
+    margin-right: 10px;
+}
+
+/* Effet lorsqu'un input est sélectionné */
+.boutonImagePub input:checked {
+    opacity: 1; 
+}
+
+
+.ImageDroiteContenu {
+    position: relative;
+}
+
+.informationImageDroitePub {
+    position: absolute;
+    display: grid;
+    grid-template-areas: "top"
+                         "bot";
+    grid-column: 1fr;
+    grid-template-rows: 1fr 0.8fr ;
+    top:0px;
+    width: 50%;
+    height: 100%;
+}
+
+.TopInformationPub {
+    grid-area: top;
+    padding: 40% 0 0 20%;
+}
+
+.TopInformationPub img {
+    width: 100%;
+}
+
+.TopInformationPub p{
+    font-style: italic;
+    font-size: 30px;
+    font-family: "Brush Script MT", cursive;
+    margin-top: 10px;
+}
+
+.BotInformationPub {
+    grid-area: bot;
+    padding: 0 0 40% 20%;
+
+}
+
+.BotInformationPub p {
+    font-family: 'AlbertSans';
+    font-size: 20px;
+    padding-right: 10%;
+}
+
+.BotInformationPub p span{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.BotInformationPub button {
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: transparent 1px;
+    background-color: var(--background-color);
+    color: white;
+}
+
+.BotInformationPub button:hover{
+    border: solid 1px var(--background-color);
+    background-color: white;
+    color: var(--background-color);
+}
+
+.boutonFlechePubG {
+    display: none;
+}
+
+.boutonFlechePubD {
+    display: none;
+}
+
+@media (max-width: 1440px) {
+    .TopInformationPub p{
+        font-size: 15px;
+        margin-top: 4px;
+    }
+
+    .BotInformationPub p span{
+        font-size: 20px;
+    }
+
+    .BotInformationPub p {
+        font-size: 10px;
+    }
+
+    .BotInformationPub button {
+        padding: 5px 20px;
+        font-size: 10px;
+        color: white;
+    }
+
+    .boutonRadioPub {
+        width: 12px;
+        height: 12px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .TopInformationPub p{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+
+    .BotInformationPub p span{
+        font-size: 15px;
+    }
+
+    .BotInformationPub p {
+        font-size: 8px;
+    }
+
+    .BotInformationPub button {
+        padding: 4px 10px;
+        font-size: 6px;
+        color: white;
+    }
+
+
+
+
+
+    .boutonImagePub{
+        display: none;
+    }
+
+    .boutonFlechePubD, .boutonFlechePubG {
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border: none;
+    }
+
+    .boutonFlechePubG {
+        left: 0;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+    .boutonFlechePubG img {
+        transform: scaleX(-1);
+    }
+
+    .boutonFlechePubD {
+        right: 0;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+
+    .boutonFlechePubG img, .boutonFlechePubD img {
+        width: 100%;
+        max-height: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Séparation espace de travaille */
