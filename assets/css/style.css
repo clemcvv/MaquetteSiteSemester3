@@ -330,7 +330,10 @@ body{
 
 
 .slider-marque{
-
+    position: relative;
+    padding: 15%;
+    background-color: #E82723;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5rem;
@@ -355,6 +358,12 @@ body{
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    
+}
+
+.button-marque img{
+    width: 100%;
+    height: auto;
     
 }
 
@@ -399,4 +408,75 @@ body{
 }
 .button-marque:nth-child(10) {
     animation-delay: calc(30s / 10 * (10 - 10) * -1);
+}
+
+footer{
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 0.5fr;
+    padding: 5% 10% 0% 15%;
+    gap: 15%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    /*  
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+    */
+}
+
+.colContact{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.redirections{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.infosbonsplan{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.mentions{
+    grid-column: 1/4;
+    grid-row: 2;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+footer .colContact .logo{
+    margin: 0 0 40% 0 ;
+}
+
+.colContact .info .caseContact .img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.colContact .info .caseContact{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    gap: 10%;
+    text-align: center;
+    
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.colContact .info .casePhone{
+    border-color: #0000003b;
 }
