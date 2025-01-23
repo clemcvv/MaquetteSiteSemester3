@@ -106,7 +106,44 @@ window.addEventListener('resize', () => {
 //-- ------------------------------------------------------>
 
 
+const images = [
+    "assets/img/pub/hashEnMode1.png",
+    "assets/img/pub/hashEnMode2.png",
+    "assets/img/pub/hashEnMode3.png"
+];
 
+let currentIndex = 0;
+const imageElement = document.querySelector(".ImagesGaucheContenu .imagePub");
+const radioButtons = document.querySelectorAll(".boutonRadioPub");
+const leftArrow = document.getElementById("imageSuivanteGauche");
+const rightArrow = document.getElementById("imageSuivanteDroite");
 
-//Séparation espace de travaille
+// Fonction pour mettre à jour l'image affichée
+function updateImage(index) {
+    imageElement.src = images[index];
+    radioButtons.forEach((radio, i) => {
+        radio.checked = i === index;
+    });
+}
 
+// Gestion des boutons radio
+radioButtons.forEach((radio, index) => {
+    radio.addEventListener("click", () => {
+        currentIndex = index;
+        updateImage(currentIndex);
+    });
+});
+
+// Gestion des flèches
+leftArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage(currentIndex);
+});
+
+rightArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage(currentIndex);
+});
+
+// Initialisation de l'image par défaut
+updateImage(currentIndex);
