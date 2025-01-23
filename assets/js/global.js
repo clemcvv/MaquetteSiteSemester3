@@ -102,7 +102,7 @@ window.addEventListener('resize', () => {
 
 
 //-- ------------------------------------------------------>
-//-- ------------------ CAROUSEL -------------------------->
+//-- ------------------ PUB -------------------------->
 //-- ------------------------------------------------------>
 
 
@@ -147,3 +147,5 @@ rightArrow.addEventListener("click", () => {
 
 // Initialisation de l'image par défaut
 updateImage(currentIndex);
+
+

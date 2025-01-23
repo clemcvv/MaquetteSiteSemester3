@@ -17,6 +17,7 @@
 }
 
 body{
+    margin: 0;
     background: fixed no-repeat  url("../img/background/backgroundimg.jpg");
     background-size: cover;
     font-family: 'AlbertSans';
@@ -215,8 +216,6 @@ body{
     width: 100%;
 }
 
-
-
 .ImagesGaucheContenu {
     margin-right: 5%;
     position: relative;
@@ -402,12 +401,46 @@ body{
 
 }
 
+/* '''''''''''''''''''''''''''''''''''''''''''''''*/
 
+  .carousel {
+    width: 100%;
+    overflow: hidden; /* Cache tout ce qui dépasse */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carouselImages {
+    display: flex;
+    gap: 1rem; /* Espace entre les images */
+    transition: transform 0.5s ease; /* Transition pour les animations */
+  }
+  
+  .carousel img {
+    flex-shrink: 0; /* Empêche les images de rétrécir */
+    width: 100%; /* Assure une largeur cohérente */
+    height: auto;
+    max-width: calc(100% / 4 - 0.75rem); /* La largeur maximale d'une image est calculée en fonction :
+                                            1. 100% / 4 : Divise la largeur totale du conteneur par 4 pour afficher 4 images côte à côte.
+                                            2. - 0.75rem : Réduit un peu la largeur pour tenir compte de l'espace (gap) entre les images. */
+    border-radius: 8px; /* Arrondi des coins */
+  }
 
+  /* Afficher 3 images */
+  @media (max-width: 1199px) and (min-width: 479px) {
+    .carousel img {
+      max-width: calc(100% / 3 - 0.67rem); /* 3 images avec gap */
+    }
+  }
 
-
-
-
+  /* Afficher 1 image */
+  @media (max-width: 479px) {
+    .carousel img {
+        max-width: calc(100% / 2 - 0.5rem); /* 2 images avec gap */
+      }
+  }
+  
 
 
 
