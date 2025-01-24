@@ -401,11 +401,25 @@ body{
 
 }
 
-/* '''''''''''''''''''''''''''''''''''''''''''''''*/
+/*<!-- ------------------------------------------------------>
+  <!-- ------------------- CSS PUB --------------------------->
+  <!-- ------------------------------------------------------>*/
 
-  .carousel {
+
+  .carousel-container {
+    padding: 200px 0;
+    background-color: var(--background-color);
+    position: relative;
     width: 100%;
-    overflow: hidden; /* Cache tout ce qui dépasse */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .carousel {
+    width: 98%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -413,37 +427,85 @@ body{
   
   .carouselImages {
     display: flex;
-    gap: 1rem; /* Espace entre les images */
-    transition: transform 0.5s ease; /* Transition pour les animations */
+    gap: 1rem;
+    transition: transform 0.5s ease;
   }
   
   .carousel img {
-    flex-shrink: 0; /* Empêche les images de rétrécir */
-    width: 100%; /* Assure une largeur cohérente */
+    flex-shrink: 0; /* Empêche les images de rétrécir, garantissant qu'elles conservent leur taille définie même si l'espace est limité. */
+    width: 100%;
     height: auto;
-    max-width: calc(100% / 4 - 0.75rem); /* La largeur maximale d'une image est calculée en fonction :
-                                            1. 100% / 4 : Divise la largeur totale du conteneur par 4 pour afficher 4 images côte à côte.
-                                            2. - 0.75rem : Réduit un peu la largeur pour tenir compte de l'espace (gap) entre les images. */
-    border-radius: 8px; /* Arrondi des coins */
+    max-width: calc(100% / 4 - 0.75rem); /* Chaque image occupe un quart de la largeur du conteneur, 
+                                            ajusté pour inclure l'espace (gap) entre les images. */
+    border-radius: 20px;
+  }
+  
+  .progress-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    position: relative;
+    gap: 1rem; /* Espacement entre les boutons et la barre */
+  }
+  
+  .carousel-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 
-  /* Afficher 3 images */
-  @media (max-width: 1199px) and (min-width: 479px) {
+  /* Style par défaut pour les flèches */
+  .carousel-btn img {
+    width: 30px; /* Taille par défaut des flèches */
+    height: auto;
+    transition: transform 0.3s ease, width 0.3s ease; /* Animation pour agrandir les flèches au survol */
+  }
+  
+  .carousel-btn:hover img {
+    transform: scale(1.2); /* Agrandir légèrement au survol */
+  }
+    
+  
+  .progress-bar {
+    flex: 1; /* Permet à la barre de prendre tout l'espace disponible entre les flèches */
+    height: 5px;
+    background-color: #ffffff65;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: width 0.5s ease;
+  }
+
+
+  .left-btn {
+    transform: scaleX(-1); /* Inversion horizontale */
+  }
+  
+  @media (max-width: 1199px) and (min-width: 478px) {
     .carousel img {
       max-width: calc(100% / 3 - 0.67rem); /* 3 images avec gap */
     }
-  }
 
-  /* Afficher 1 image */
+    .carousel-btn img {
+        width: 25px; /* Réduire la taille des flèches */
+  }
+}
   @media (max-width: 479px) {
     .carousel img {
-        max-width: calc(100% / 2 - 0.5rem); /* 2 images avec gap */
+      max-width: calc(100% / 2 - 0.5rem); /* 2 images avec gap */
+    }
+
+    .carousel-btn img {
+        width: 20px; /* Taille réduite pour les écrans plus petits */
       }
   }
   
-
-
-
 
 
 
