@@ -200,7 +200,7 @@ body{
   }
 
 /*<!-- ------------------------------------------------------>
-  <!-- ------------------- CSS PUB --------------------------->
+  <!-- ------------------- CSS PUB -------------------------->
   <!-- ------------------------------------------------------>*/
 
 
@@ -344,6 +344,11 @@ body{
 }
 
 @media (max-width: 768px) {
+
+    .Pub {
+        padding-top: 100px;
+    }
+
     .TopInformationPub p{
         font-size: 10px;
         margin-top: 2px;
@@ -402,7 +407,7 @@ body{
 }
 
 /*<!-- ------------------------------------------------------>
-  <!-- ------------------- CSS PUB --------------------------->
+  <!-- ------------------- CSS CAROUSEL --------------------->
   <!-- ------------------------------------------------------>*/
 
 
@@ -444,7 +449,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     position: relative;
     gap: 1rem; /* Espacement entre les boutons et la barre */
   }
@@ -473,6 +478,8 @@ body{
     background-color: #ffffff65;
     border-radius: 20px;
     overflow: hidden;
+    grid-area: progress;
+
   }
   
   .progress {
@@ -486,6 +493,118 @@ body{
   .left-btn {
     transform: scaleX(-1); /* Inversion horizontale */
   }
+
+
+  .grilleTitreProgressionBar {
+    display: grid;
+    grid-template-areas: 
+        "actus bonsplans"
+        "text   progress";
+    grid-template-columns: 1fr 2.5fr; /* Deux colonnes égales */
+    grid-template-rows: auto auto; /* Deux lignes automatiques */
+    width: 90%;
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+#ActusTest {
+    grid-area: actus;
+    margin: 0;
+
+    padding-right: 50px;
+    font-family: 'Albert Sans', sans-serif; 
+    font-weight: bold;
+    font-size: 65px; 
+    color: white; 
+}
+
+#ActuBonsPlan {
+    grid-area: bonsplans;
+
+    display: grid; /* Assure un comportement de grille */
+    align-items: center; /* Centre verticalement tout le contenu */
+    text-align: right; /* Aligne le texte à droite */
+
+}
+
+#ActuBonsPlan p {
+    margin: 0;
+    font-family: 'Albert Sans', sans-serif; 
+    font-weight: bold;
+    font-size: 20px; 
+    color: var(--background-color); 
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block; /* Ajuste la taille à celle du texte */
+    justify-self: end; /* Aligne horizontalement à droite dans la grille */
+}
+
+#BonPlanText {
+    grid-area: text;
+    margin: 0;
+    padding-left: 10%;
+    font-family: 'Albert Sans', sans-serif; 
+    font-weight: bold;
+    font-size: 65px; 
+    color: transparent; 
+    -webkit-text-stroke: 2px #ffffff; /* Largeur et couleur de la bordure */
+}
+
+@media (max-width : 1024px) {
+
+    .carousel-container {
+        padding: 100px 0;
+
+      }
+
+    #BonPlanText {
+        font-size: 35px; 
+    }
+
+    #ActusTest {
+        font-size: 40px; 
+    }
+
+    #ActuBonsPlan p {
+        font-size: 15px; 
+    }
+}
+
+
+@media (max-width : 900px) {
+
+    #BonPlanText {
+        font-size: 25px; 
+    }
+
+    #ActusTest {
+        font-size: 30px; 
+    }
+
+    #ActuBonsPlan p {
+        font-size: 10px; 
+    }
+}
+
+@media (max-width : 500px) {
+
+    #BonPlanText {
+        font-size: 10px; 
+        -webkit-text-stroke: 1px #ffffff;
+
+    }
+
+    #ActusTest {
+        font-size: 15px; 
+    }
+
+    #ActuBonsPlan p {
+        font-size: 8px; 
+    }
+}
+
+
+
   
   @media (max-width: 1199px) and (min-width: 478px) {
     .carousel img {
