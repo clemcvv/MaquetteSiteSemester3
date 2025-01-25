@@ -817,7 +817,7 @@ body{
 }
 
 .button-marque img{
-    width: 100%;
+    width: 50%;
     height: auto;
     
 }
@@ -865,9 +865,13 @@ body{
     animation-delay: calc(30s / 10 * (10 - 10) * -1);
 }
 
+
+/*<!-- ------------------------------------------------------>
+  <!-- ------------------- CSS FOOTER ----------------------->
+  <!-- ------------------------------------------------------>*/
+
 footer{
     display: grid;
-    
     grid-template-columns: 1fr 1fr 1.5fr;
     grid-template-rows: 1fr 0.5fr;
     padding: 5% 10% 0% 15%;
@@ -876,14 +880,9 @@ footer{
     position: absolute;
     left: 0;
     right: 0;
-    
-    /*  
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5%;
-    */
 }
+
+
 
 .colContact{
     grid-column: 1;
@@ -894,18 +893,61 @@ footer{
     grid-column: 2;
     grid-row: 1;
 }
+.redirections a{
+    color: black;
+    text-decoration: none;
+}
 
 .infosbonsplan{
     grid-column: 3;
     grid-row: 1;
 }
 
+.sharefoot{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+}
+
+.sharefoot a{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sharefoot a:hover{
+    transform: translateY(-5px);
+}
+
+.sharefoot p{
+    font-size: clamp(16px, 2vw, 25px);
+    font-family: "AlbertSansBoldItalic";
+    font-style: italic;
+}
+
+.sharefoot #partage{
+    color: var(--background-color);
+}
+
+.emailfooter{
+    margin-left: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.emailfooter input{
+    background-color: white;
+}
+
 .mentions{
     grid-column: 1/4;
     grid-row: 2;
-
+    font-size: clamp(12px, 1vw, 16px);
     display: flex;
     justify-content: space-between;
+}
+
+.mentions a{
+    color: black;
 }
 
 
@@ -923,6 +965,7 @@ footer .colContact .logo{
 .colContact .info .caseContact{
     width: 60%;
     display: grid;
+    
     grid-template-columns: 10% 1fr;
     gap: 10%;
     text-align: center;
@@ -934,4 +977,39 @@ footer .colContact .logo{
 
 .colContact .info .casePhone{
     border-color: #0000003b;
+}
+
+@media (max-width: 1024px){
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows:auto;
+        gap: 0%;
+        
+        
+    }
+    
+    footer .colContact .logo{
+        margin: 0 0 10% 0 ;
+    } 
+    .colContact{
+        justify-content: center;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .redirections{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .infosbonsplan{
+        grid-column: 1;
+        grid-row: 3;
+
+    }
+    
+    .mentions{
+        grid-column: 1;
+        grid-row: 4;
+    }
 }
