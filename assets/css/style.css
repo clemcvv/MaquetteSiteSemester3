@@ -509,8 +509,23 @@ body{
     font-size: 28px;
 }
 
+.redBackground{
+    background-color: #E82723;
+    padding-bottom: 2%;
+    margin-top: 20%;
+}
+
 .tips{
     margin-top: 5%;
+    position: relative;
+    bottom: 20vh;
+}
+
+
+@media (max-width: 1024px){
+    .tips{
+        position: static;
+    }
 }
 
 .box-jaune{
@@ -518,30 +533,32 @@ body{
     margin-right: auto;
     background-color: #F8DF00; 
     padding: 15px;
-    width: 72%;
+    width: 70%;
     border-radius: 15px;
     text-align: center;
-    font-size: 20px;
+    font-size:clamp(10px, 2vw, 20px);
     padding-bottom: 2%;
 }
 
 .box-jaune h2{
+    margin-right: 10px;
     color: white;
     position: relative;
     text-align: left;
     font-family: 'AlbertSansBoldItalic';
     font-weight: bold;
-    font-size: 58px;
+    font-size: clamp(10px, 7vw, 50px);
     -webkit-text-stroke: 3px black;
     margin: 0%;
-    top: -58px;
+    bottom: clamp(10px, 3vw, 7vw);
     left: 0px;
 }
 
 .box-jaune h3{
     font-family: 'AlbertSansBlack';
     margin-top: 0%;
-    font-size: 50px;
+    font-size: clamp(14px, 6vw, 48px);
+      
     font-weight: bold;
 }
 
@@ -549,10 +566,10 @@ body{
     margin-left: auto;
     margin-right: auto;
     display: flex;
+   
     align-items: center;
-    width: 30%;
-    
-    border: 5px solid black; 
+    width: 50%;
+    border: 3px solid black; 
     border-radius: 50px; 
     overflow: hidden; 
     background-color: #F8DF00;
@@ -560,12 +577,14 @@ body{
 
 .email-container input{
     border: none;
-    padding: 30px 40px; 
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px; 
     flex: 1; 
-    font-size: 16px;
     outline: none;
     background-color: #F8DF00;
-    font-size: 20px;
+    font-size: clamp(10px, 2vw, 20px);
+
 }
 
 .email-container input::placeholder{
@@ -574,6 +593,7 @@ body{
 }
 .email-container img{
     padding: 10px 20px;
+    width: clamp(16px, 2vw, 20px);
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -585,7 +605,7 @@ body{
 
 .slider-marque{
     position: relative;
-    padding: 15%;
+    padding-bottom: 15%;
     background-color: #E82723;
     width: 100%;
     margin-left: auto;
