@@ -17,7 +17,7 @@
 }
 
 body{
-    margin: 0;
+    margin: 0; 
     background: fixed no-repeat  url("../img/background/backgroundimg.jpg");
     background-size: cover;
     font-family: 'AlbertSans';
@@ -29,53 +29,51 @@ body{
   <!-- ------------------------------------------------------>*/
 
 #header {
-    position: fixed;
+    position: fixed; /* fixé en haut de la page en prenant toute sas largeur */
     top: 0;
     left: 0;
     width: 100%;
     transition: top 0.6s ease-in-out;
-    z-index: 10;
+    z-index: 10; /* rien ne passe par dessus*/
 }
 
 
 .barNav { 
     background-color: white;
-    display: flex;
+    display: flex;  /* aligne tous les enfant en ligne et centré verticalement */
     flex-direction: row;
-    align-items: center; /* Aligne tous les enfants verticalement au centre */
-    height: 100px; /* hauteur fixe */
+    align-items: center; 
+    height: 100px; /* hauteur fixe et largeur du header*/
     width: 100%;
 }
 
 .logo{
-    color: black;
-    font-size: 65px;
+    color: black; 
+    font-size: 65px; 
     margin: 0 0 0 50px;
-    display: flex;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     font-weight: 400; 
 }
 
 .barNav ul {
-    display: flex;
+    display: flex; /* disposition en ligne avec un gap entre de 30px centré verticalement */
     flex-direction: row;
     margin: 0 auto 0 auto;
     gap: 30px;
     padding: 0%;
     height: 100%; 
-    align-items: center; /* Assure que les éléments enfants sont centrés verticalement */
     position: relative;
 }
 
 .barNav ul li {
     list-style: none;
     color: black;
-    display: flex;
+    display: flex; /* centré verticalement */
     align-items: center; 
     font-family: 'AlbertSans';
     font-weight: bold;
     height: 100%; 
-    cursor: pointer;
+    cursor: pointer; /* curseur qui pointe les endroits cliquable */
     font-size: 20px;
     
 }
@@ -85,7 +83,7 @@ body{
 }
 
 .barNav img {
-    padding-right: 50px;
+    padding-right: 50px; /* image loupe */
     cursor: pointer;
     height: 35px;
 }
@@ -99,9 +97,11 @@ body{
 }
 
 .searchContainer {
-    display: flex;
+    display: flex; /* input et loupe sur la meme ligne */
 }
 
+
+/* css du input son place holder son focus et son apparition/disparition */
 #searchForm input {
     border: none;
     border-bottom: solid 4px black;
@@ -131,7 +131,7 @@ body{
     display: block;
 }
 
-.infoExceptionnelle{
+.infoExceptionnelle{ 
     width: 100%;
     background-color: black;
     color: white;
@@ -145,12 +145,12 @@ body{
     font-size: 16px;
 }
 
-.deroulerHeader {
+.deroulerHeader { /* bouton fleche ne pas afficher de base car en grand ecran les header et constament affiché */
     text-align: center;
     display: none;
 }
 
-.deroulerHeader button{
+.deroulerHeader button{ 
     border: none;
     padding: 0 20px;
     background-color: white;
@@ -164,6 +164,8 @@ body{
     border-left: solid 3px white;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 1024px) {
 
     .logo{
@@ -176,9 +178,10 @@ body{
     }
 
     .header {
-        top: -300px;
+        top: -300px; /* caché le header sans le message en fond noir */
     }
 
+    /* ajustation de taille */
     .barNav ul {
         height: 50px; 
         margin: 25px 15px;
@@ -195,7 +198,7 @@ body{
 
     .deroulerHeader {
         display: block;
-    }
+    } 
     
   }
 
