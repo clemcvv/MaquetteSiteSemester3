@@ -208,10 +208,10 @@ body{
 
 
 .Pub {
-    padding-top: 200px;
+    padding-top: 200px; 
     width: 100%;
     max-height: 800px;
-    display: flex;
+    display: flex; /* div l'une a coté de l'autre */
     background-color: var(--background-color);
 }
 
@@ -221,7 +221,7 @@ body{
 
 .ImagesGaucheContenu {
     margin-right: 5%;
-    position: relative;
+    position: relative; /* les bouton seront en fonction de l'img */
 }
 
 .boutonImagePub{
@@ -233,8 +233,8 @@ body{
 .boutonRadioPub {
     width: 16px;
     height: 16px;
-    background-color: white; /* Couleur blanche par défaut */
-    border-radius: 50%; /* Optionnel : pour un look arrondi */
+    background-color: white;
+    border-radius: 50%; /* arrondi */
     appearance: none; /* Supprime le style par défaut des inputs */
     outline: none;
     cursor: pointer;
@@ -242,19 +242,19 @@ body{
     margin-right: 10px;
 }
 
-/* Effet lorsqu'un input est sélectionné */
+/* lorsqu'un input est sélectionné */
 .boutonImagePub input:checked {
     opacity: 1; 
 }
 
 
 .ImageDroiteContenu {
-    position: relative;
+    position: relative; /* elements en fonction l'img */
 }
 
 .informationImageDroitePub {
-    position: absolute;
-    display: grid;
+    position: absolute; /* pour le positionner sur l'img */
+    display: grid; /* gille pour une meilleure gestion */
     grid-template-areas: "top"
                          "bot";
     grid-column: 1fr;
@@ -312,14 +312,17 @@ body{
 }
 
 .boutonFlechePubG {
-    display: none;
+    display: none; /* fleches afficher que pour les petits ecrans */
 }
 
 .boutonFlechePubD {
     display: none;
 }
 
+/* responsive */
 @media (max-width: 1440px) {
+
+    /* ajustements tailles */
     .TopInformationPub p{
         font-size: 15px;
         margin-top: 4px;
@@ -371,13 +374,13 @@ body{
         color: white;
     }
 
-
+    /* supprimer le bouton pour mettre les fleches */
     .boutonImagePub{
         display: none;
     }
 
     .boutonFlechePubD, .boutonFlechePubG {
-        position: absolute;
+        position: absolute; /* positionné par rapport à l'img */
         display: block;
         width: 50px;
         height: 50px;
@@ -385,16 +388,19 @@ body{
         border: none;
     }
 
+    /* centrer verticalement */
     .boutonFlechePubG {
         left: 0;
         transform: translateY(-50%);
         top: 50%;
     }
 
+    /* inversé la fleche */
     .boutonFlechePubG img {
         transform: scaleX(-1);
     }
 
+    /* centrer verticalement */
     .boutonFlechePubD {
         right: 0;
         transform: translateY(-50%);
