@@ -23,7 +23,7 @@ body{
   <!-- ------------------------------------------------------>*/
 
 .header {
-    position: fixed;
+    position: fixed; /* position fixe en haut  */
     top: 0;
     left: 0;
     width: 100%;
@@ -33,7 +33,7 @@ body{
 
 .barNav { 
     background-color: white;
-    display: flex;
+    display: flex; 
     flex-direction: row;
     align-items: center; /* Aligne tous les enfants verticalement au centre */
     height: 100px; /* hauteur fixe */
@@ -50,12 +50,12 @@ body{
 }
 
 .barNav ul {
-    display: flex;
-    flex-direction: row;
+    display: flex; /* element en ligne */
+    flex-direction: row; 
     margin: 0 auto 0 auto;
     gap: 30px;
     padding: 0%;
-    height: 100%; 
+    height: 100%; /* 100% de la hauteur du header */
     align-items: center; /* Assure que les éléments enfants sont centrés verticalement */
     position: relative;
 }
@@ -68,13 +68,13 @@ body{
     font-family: 'AlbertSans';
     font-weight: bold;
     height: 100%; 
-    cursor: pointer;
+    cursor: pointer; /* le curseur les pointe */
     font-size: 20px;
     
 }
 
 .barNav ul li:hover {
-    border-bottom: 5px solid #F4E500;
+    border-bottom: 5px solid #F4E500; /* bordure au survol */
 }
 
 .barNav img {
@@ -92,9 +92,10 @@ body{
 }
 
 .searchContainer {
-    display: flex;
+    display: flex; /* input et loupe en ligne */
 }
 
+/* css input place holder focus et visible ou non */
 #searchForm input {
     border: none;
     border-bottom: solid 4px black;
@@ -124,6 +125,7 @@ body{
     display: block;
 }
 
+/* message fond noir  */
 .infoExceptionnelle{
     width: 100%;
     background-color: black;
@@ -138,6 +140,7 @@ body{
     font-size: 16px;
 }
 
+/* bouton image fleche (pas affiche en grend ecran) */
 .deroulerHeader {
     text-align: center;
     display: none;
@@ -157,19 +160,22 @@ body{
     border-left: solid 3px white;
 }
 
+/* responsive */
 @media (max-width: 1024px) {
 
     .logo{
         margin: 0;
     }
 
+    /* changement disposition */
     .barNav { 
         flex-direction: column;
         height: 300px; /* hauteur fixe */
     }
 
+    /* cacher le header */
     .header {
-        top: -335px;
+        top: -300px;
     }
 
     .barNav ul {
@@ -185,7 +191,7 @@ body{
     #searchForm {
         margin-top: 25px; 
     }
-
+    /* afficher fleche */
     .deroulerHeader {
         display: block;
     }
