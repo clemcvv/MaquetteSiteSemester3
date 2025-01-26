@@ -14,9 +14,9 @@
 <!-- ------------------ HEADER ---------------------------->
 <!-- ------------------------------------------------------>
  
-<header class="header" id="header">
+<header id="header">
     <div class="barNav">
-        <p class="logo">LOGO</p>
+        <h1 class="logo">LOGO</h1>
         <ul>
             <li>Boutiques & Restaurants</li>
             <li>Actus & Bons plans</li>
@@ -43,6 +43,108 @@
         </button>
     </div>
 </header>
+
+<!-- ------------------------------------------------------>
+<!-- ------------------ PUB ------------------------------->
+<!-- ------------------------------------------------------>
+
+<div class="Pub">
+
+    <div class="ImagesGaucheContenu">
+        
+        <img class="imagePub" src="assets/img/pub/hashEnMode1.png" alt="Image Gauche"/>
+
+        <div class="boutonImagePub">
+            <input class="boutonRadioPub" type='radio' name='slider' id='image1' checked>
+            <input class="boutonRadioPub" type='radio' name='slider' id='image2' >
+            <input class="boutonRadioPub" type='radio' name='slider' id='image2' >
+        </div>
+
+        <button id="imageSuivanteGauche" class="boutonFlechePubG"> <img src="assets/img/pub/flechePubDroite.svg" alt=""></button>
+        <button id="imageSuivanteDroite" class="boutonFlechePubD"> <img src="assets/img/pub/flechePubDroite.svg" alt=""></button>
+
+        
+    </div>
+
+    <div class="ImageDroiteContenu">
+
+        <img class="imagePub" src="assets/img/pub/womanOrange.png" alt="Image Droite"/>
+        
+        <div class="informationImageDroitePub">
+
+            <div class="TopInformationPub">
+                <img src="assets/img/pub/PrimarkLogo.png" alt="logo primark">
+                <p>Mode & Déco</p>
+            </div>
+            
+            <div class="BotInformationPub">
+                <p><span>Evènement</span><br>Primark ouvrira ses portes le 21 Févrirer 2023</p>
+                <button>En savoir plus</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!-- ------------------------------------------------------>
+<!-- ------------------ ICONES ---------------------------->
+<!-- ------------------------------------------------------>
+
+
+
+
+
+<!-- ------------------------------------------------------>
+<!-- ------------------ CAROUSEL -------------------------->
+<!-- ------------------------------------------------------>
+
+<div class="carousel-container">
+
+    <div class="grilleTitreProgressionBar">
+        <p id="ActusTest">Actus &</p>
+
+        <div id="ActuBonsPlan">
+            <p>Toutes les actus & bons plans</p>
+        </div>
+
+        <p id="BonPlanText">bons plans</p>
+        <div class="progress-bar-container">
+            <button class="carousel-btn left-btn">
+                <img src="assets/img/Carousel/flechePubDroite.svg">
+            </button>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <button class="carousel-btn right-btn">
+                <img src="assets/img/Carousel/flechePubDroite.svg">
+            </button>
+        </div>
+    </div>
+    
+
+
+      
+
+    <div class="carousel">
+      <div class="carouselImages">
+        <img src="assets/img/Carousel/carousel1.png" alt="Image 1">
+        <img src="assets/img/Carousel/carousel2.png" alt="Image 2">
+        <img src="assets/img/Carousel/carousel3.png" alt="Image 3">
+        <img src="assets/img/Carousel/carousel4.png" alt="Image 4">
+        <img src="assets/img/Carousel/carousel5.png" alt="Image 5">
+        <img src="assets/img/Carousel/carousel1.png" alt="Image 6">
+        <img src="assets/img/Carousel/carousel2.png" alt="Image 7">
+        <img src="assets/img/Carousel/carousel3.png" alt="Image 8">
+      </div>
+    </div>
+
+</div>
+  
+  
+
+
+
 
 
 <!-- Séparation espace de travaille -->
@@ -81,36 +183,96 @@
         <p><strong>Plus de 40 boutiques</strong> de mode, beauté et déco pour dénicher les dernières tendances <br> et se faire plaisir ensemble.</p>
     </div>
 </div>
-
-<div class="tips">
-    
-    <div class = "box-jaune">
-        <h2>#enmodetips</h2>
-        <h3>Infos & bons plans</h3>
-        <div class="email-container">
-            <input type="text" name="mail" placeholder="Votre mail">
-            <img src="assets/img/tips/fleche.png">
-        </div>
+<div class = "redBackground">
+    <div class="tips">
         
-        <p>En renseignant votre adresse e-mail, vous acceptez de recevoir des informations de la part <br>des enseignes et vous prenez connaissance de notre Politique de confidentialité.</p>
+        <div class = "box-jaune">
+            <h2>#enmodetips</h2>
+            <h3>Infos & bons plans</h3>
+            <div class="email-container">
+                <input type="text" name="mail" placeholder="Votre mail">
+                <img src="assets/img/tips/fleche.png">
+            </div>
+            
+            <p>En renseignant votre adresse e-mail, vous acceptez de recevoir des informations de la part <br>des enseignes et vous prenez connaissance de notre Politique de confidentialité.</p>
+        </div>
+
     </div>
 
+    <div class = "slider-marque">
+    
+        <a href = "https://pharmacie-principale-tours.pharmabest.com/" class = "button-marque"><img src="assets/img/magasin/Pharmacie.png" alt="logo pharmacie"></a>
+        <a href = "https://www.dubruitdanslacuisine.fr/" class = "button-marque"><img src="assets/img/magasin/BruitCuisine.png" alt="logo Bruit"></a>
+        <a href = "https://www.fnac.com/" class = "button-marque"><img src="assets/img/magasin/Fnac.png" alt="logo Fnac"></a>
+        <a href = "https://www2.hm.com/fr_fr/index.html" class = "button-marque"><img src="assets/img/magasin/H&M.png" alt="logo H&M"></a>
+        <a href = "https://www.mcdonalds.fr/" class = "button-marque"><img src="assets/img/magasin/Mcdo.png" alt="logo Mcdo"></a>
+        <a href = "https://www.sephora.fr/" class = "button-marque"><img src="assets/img/magasin/Sephora.png" alt="logo Sephora"></a>
+        <a href = "https://www.marionnaud.fr/" class = "button-marque"><img src="assets/img/magasin/Marionnaud.png" alt="logo Marionnaud"></a>
+        <a href = "https://www.normal.fr/" class = "button-marque"><img src="assets/img/magasin/Normal.png" alt="logo Normal"></a>
+        <a href = "https://www.jdsports.fr/" class = "button-marque"><img src="assets/img/magasin/JD.png" alt="logo JD"></a>
+        <a href = "https://www.fnac.com/" class = "button-marque"><img src="assets/img/magasin/Fnac.png" alt="logo Fnac"></a>   
+        
+    </div>
 </div>
 
-<div class = "slider-marque">
-   
-    <a href = "https://pharmacie-principale-tours.pharmabest.com/" class = "button-marque"><img src="assets/img/magasin/Pharmacie.png" alt=""></a>
-    <a href = "https://www.dubruitdanslacuisine.fr/" class = "button-marque"><img src="assets/img/magasin/BruitCuisine.png" alt=""></a>
-    <a href = "https://www.fnac.com/" class = "button-marque"><img src="assets/img/magasin/Fnac.png" alt=""></a>
-    <a href = "https://www2.hm.com/fr_fr/index.html" class = "button-marque"><img src="assets/img/magasin/H&M.png" alt=""></a>
-    <a href = "https://www.mcdonalds.fr/" class = "button-marque"><img src="assets/img/magasin/Mcdo.png" alt=""></a>
-    <a href = "https://www.sephora.fr/" class = "button-marque"><img src="assets/img/magasin/Sephora.png" alt=""></a>
-    <a href = "https://www.marionnaud.fr/" class = "button-marque"><img src="assets/img/magasin/Marionnaud.png" alt=""></a>
-    <a href = "https://www.normal.fr/" class = "button-marque"><img src="assets/img/magasin/Normal.png" alt=""></a>
-    <a href = "https://www.jdsports.fr/" class = "button-marque"><img src="assets/img/magasin/JD.png" alt=""></a>
-    <a href = "https://www.fnac.com/" class = "button-marque"><img src="assets/img/magasin/Fnac.png" alt=""></a>   
-    
+<div class="sidebar">
+    <div class="side-content">
+        <p>#enmode<span id = "partage">partage</span></p>
+        <a><img src="assets/img/footer/logo-facebook.png" alt=""></a>
+        <a><img src="assets/img/footer/logo-X.png" alt=""></a>
+        
+    </div> 
 </div>
+
+<footer>
+    <!--Logo + numero-->
+    <div class = "colContact">
+        <p class="logo">LOGO</p>
+        <div class="info">
+            <h4>Nom du logo</h4>
+            <p>Toute l’adresse est là ou pas….</p>
+            <p class="caseContact casePhone"><img src="assets/img/footer/logo-phone.png" alt="">01 02 03 04 05</p>
+            <p class="caseContact"><img src="assets/img/footer/logo-mail.png" alt=""> Par Mail</p>
+        </div>
+    </div>
+    <!--Différentes redirections-->
+    <div class = "redirections">
+        <h4>Nom logo et vous</h4>
+        <a href="">Notre histoire</a> <br>
+        <a href="">Accès / Horaires </a> <br>
+        <a href="">Boutiques & Restaurants</a> <br>
+        <a href="">Actus & bons plans</a><br>
+        <a href="">Infos pratiques</a> <br>
+        <a href="">Plans des centres</a> <br>
+        <a href="">Emploi</a> 
+        <h4>Louer</h4>
+        <a href="">Un emplacement temporaire</a> <br>
+        <a href="">Un local</a> 
+    </div>
+    <!--infos et bons plans-->
+    <div class="infosbonsplans">
+        <div class = "sharefoot">
+            <a><img src="assets/img/footer/logo-facebook.png" alt=""></a>
+            <a><img src="assets/img/footer/logo-X.png" alt=""></a>
+            <p>#enmode<span id = "partage">partage</span></p>
+        </div>
+
+        <div>
+            <h4>Infos & bons plans</h4>
+            <div class="emailfooter email-container">
+                <input type="text" name="mail" placeholder="Votre mail">
+                <img src="assets/img/tips/fleche.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="mentions">
+        <p>2023 Logo. Tous droits réservés.</p>
+        <p><a href="">Mentions légales</a> - <a href="">Politique de confidentialité</a></p>
+
+    </div>
+
+</footer>
 
 </body>
 <script src="assets/js/global.js"></script>

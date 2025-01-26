@@ -1,4 +1,8 @@
 
+//-- ------------------------------------------------------>
+//-- ------------------ HEADER ---------------------------->
+//-- ------------------------------------------------------>
+
 // Variable pour la visibilité de la barre de recherche 
 let visibleSearchBar = false;
 
@@ -97,7 +101,100 @@ window.addEventListener('resize', () => {
 });
 
 
+//-- ------------------------------------------------------>
+//-- ------------------ PUB ------------------------------->
+//-- ------------------------------------------------------>
 
 
-//Séparation espace de travaille
+const images = [
+    "assets/img/pub/hashEnMode1.png",
+    "assets/img/pub/hashEnMode2.png",
+    "assets/img/pub/hashEnMode3.png"
+];
+
+let currentIndex = 0;
+const imageElement = document.querySelector(".ImagesGaucheContenu .imagePub");
+const radioButtons = document.querySelectorAll(".boutonRadioPub");
+const leftArrow = document.getElementById("imageSuivanteGauche");
+const rightArrow = document.getElementById("imageSuivanteDroite");
+
+// Fonction pour mettre à jour l'image affichée
+function updateImage(index) {
+    imageElement.src = images[index];
+    radioButtons.forEach((radio, i) => {
+        radio.checked = i === index;
+    });
+}
+
+// Gestion des boutons radio
+radioButtons.forEach((radio, index) => {
+    radio.addEventListener("click", () => {
+        currentIndex = index;
+        updateImage(currentIndex);
+    });
+});
+
+// Gestion des flèches
+leftArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage(currentIndex);
+});
+
+rightArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage(currentIndex);
+});
+
+// Initialisation de l'image par défaut
+updateImage(currentIndex);
+
+
+
+//-- ------------------------------------------------------>
+//-- ------------------ CAROUSEL -------------------------->
+//-- ------------------------------------------------------>
+
+
+const carouselImagesContainer = document.querySelector('.carouselImages');
+const carouselImageElements = document.querySelectorAll('.carousel img');
+const leftButton = document.querySelector('.left-btn');
+const rightButton = document.querySelector('.right-btn');
+const progressBar = document.querySelector('.progress');
+
+let currentImageIndex = 0;  // L'indice de l'image actuellement affichée
+const imagesToShow = 4;      // Le nombre d'images visibles dans le carousel
+const totalImageCount = carouselImageElements.length - imagesToShow + 1;  // Le nombre total d'images visibles dans le carousel
+
+// Fonction pour mettre à jour la position du carousel et la barre de progression
+function updateCarousel() {
+  // Calcule la largeur d'une image avec l'espace entre elles (gap)
+  const imageWidth = carouselImageElements[0].offsetWidth + parseFloat(getComputedStyle(carouselImagesContainer).gap);
+  
+  // Calcul du décalage en fonction de l'index actuel
+  const offset = -currentImageIndex * imageWidth;
+  
+  // Applique le décalage pour déplacer les images du carousel
+  carouselImagesContainer.style.transform = `translateX(${offset}px)`;
+  
+  // Mise à jour de la barre de progression
+  const progressPercentage = ((currentImageIndex) / (totalImageCount - 1)) * 100; // Calcule le pourcentage en fonction de l'index
+  progressBar.style.width = `${Math.min(progressPercentage, 100)}%`;  // S'assure que la largeur ne dépasse pas 100%
+}
+
+// Écouteur pour le bouton gauche (précédent)
+leftButton.addEventListener('click', () => {
+  // Empêche de dépasser le premier élément du carousel
+  currentImageIndex = Math.max(currentImageIndex - 1, 0);
+  updateCarousel();
+});
+
+// Écouteur pour le bouton droit (suivant)
+rightButton.addEventListener('click', () => {
+  // Empêche de dépasser le dernier élément du carousel
+  currentImageIndex = Math.min(currentImageIndex + 1, totalImageCount - 1);
+  updateCarousel();
+});
+
+// Initialiser le carousel à l'état par défaut
+updateCarousel();
 
