@@ -738,7 +738,15 @@ body{
     font-family: 'AlbertSansBoldItalic';
     font-weight: bold;
     font-size: clamp(10px, 7vw, 50px);
-    -webkit-text-stroke: 3px black;
+    text-shadow: 
+    3px 3px 0 black,   /* Ombre en bas à droite */
+    -3px 3px 0 black,  /* Ombre en bas à gauche */
+    3px -3px 0 black,  /* Ombre en haut à droite */
+    -3px -3px 0 black, /* Ombre en haut à gauche */
+    0px 3px 0 black,   /* Ombre directe en bas */
+    0px -3px 0 black,  /* Ombre directe en haut */
+    3px 0px 0 black,   /* Ombre directe à droite */
+    -3px 0px 0 black;  /* Ombre directe à gauche */
     margin: 0%;
     bottom: clamp(10px, 3vw, 7vw);
     left: 0px;
@@ -874,6 +882,57 @@ body{
     animation-delay: calc(30s / 10 * (10 - 10) * -1);
 }
 
+
+
+.sidebar{
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    margin: 5%;
+}
+
+.side-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    
+}
+.side-content p{
+    writing-mode: vertical-lr; /* Oriente le texte verticalement */
+    transform: rotate(180deg);
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+
+    text-shadow: 
+    3px 3px 0 black,   /* Ombre en bas à droite */
+    -3px 3px 0 black,  /* Ombre en bas à gauche */
+    3px -3px 0 black,  /* Ombre en haut à droite */
+    -3px -3px 0 black, /* Ombre en haut à gauche */
+    0px 3px 0 black,   /* Ombre directe en bas */
+    0px -3px 0 black,  /* Ombre directe en haut */
+    3px 0px 0 black,   /* Ombre directe à droite */
+    -3px 0px 0 black;  /* Ombre directe à gauche */
+}
+
+.side-content a{
+    transition: transform 0.3s ease;
+}
+.side-content a:hover{
+    transform: translateX(10px);
+    
+}
+
+
+@media (max-width : 1024px) {
+    .side-content p{
+        display: none;
+    }
+
+}
 
 /*<!-- ------------------------------------------------------>
   <!-- ------------------- CSS FOOTER ----------------------->
