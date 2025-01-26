@@ -4,6 +4,32 @@ Ce projet consiste à reproduire un site web existant. Suivez les étapes ci-des
 
 ---
 
+## Compte rendu du projet
+
+
+### 1.Organisation du projet 
+- Réalisation d’une maquette sur `tldraw` afin d’avoir une vue globale du site afin de définir comment chaque éléments peuvent être implémenter.
+- Fiche technique réaliser sur GitHub pour avoir toutes les commandes nécessaires à porter de main.
+
+
+### 2. Répartition des Tâches
+Séparation de la page en 2 ce qui nous a permis de définir sur git une ligne séparatrice pour éviter les conflits lors de merge.
+
+- **Venot Clément** : Header -> Actus & Bons plans
+- **Laaroussi Mohamed-Amine** : Shopping selection -> footer
+
+### 3. Difficultés rencontrées 
+
+
+- **Icones Catégories** : Changement de couleur lors du passage de la souris 
+- **Formulaire** : faire chevaucher le formulaire par rapport au background 
+- **Slider infini** : largeur de page qui changeais
+- **Footer** : Background qui ne prenait pas tout les éléments
+
+### **L'intégralité de la maquette a été réaliser**
+
+---
+
 ## Commandes Git de base
 
 Voici les commandes Git essentielles pour collaborer efficacement sur ce projet :

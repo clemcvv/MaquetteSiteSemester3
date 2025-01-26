@@ -74,7 +74,7 @@ document.getElementById('deroulerHeader').addEventListener('click', () => {
         header.style.top = "0px";
     } else {
         icon.setAttribute('src', downImage);
-        header.style.top = "-335px";
+        header.style.top = "-300px";
     }
 });
 
@@ -95,7 +95,7 @@ window.addEventListener('resize', () => {
         icon.setAttribute('src', downImage);
     } else {
         // Si la fenêtre est petite, masquez le header et affichez la flèche
-        header.style.top = "-335px";
+        header.style.top = "-300px";
         icon.setAttribute('src', downImage);
     }
 });
