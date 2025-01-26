@@ -176,12 +176,12 @@ body{
     }
 
     .header {
-        top: -335px;
+        top: -300px;
     }
 
     .barNav ul {
         height: 50px; 
-        margin: 25px 0;
+        margin: 25px 15px;
     }
 
     .barNav img {
