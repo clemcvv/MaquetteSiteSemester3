@@ -411,12 +411,12 @@ body{
   <!-- ------------------------------------------------------>*/
 
 
-  .carousel-container {
+  .carousel-container { /* coutenu de tout le carousel */
     padding: 200px 0;
     background-color: var(--background-color);
     position: relative;
     width: 100%;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -424,7 +424,7 @@ body{
   
   .carousel {
     width: 98%;
-    overflow: hidden;
+    overflow: hidden; /* cache les img qui depassent */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -437,7 +437,7 @@ body{
   }
   
   .carousel img {
-    flex-shrink: 0; /* Empêche les images de rétrécir, garantissant qu'elles conservent leur taille définie même si l'espace est limité. */
+    flex-shrink: 0; /* Empêche les images de rétrécir, conservent leur taille définie */
     width: 100%;
     height: auto;
     max-width: calc(100% / 4 - 0.75rem); /* Chaque image occupe un quart de la largeur du conteneur, 
@@ -451,7 +451,7 @@ body{
     justify-content: center;
     width: 100%;
     position: relative;
-    gap: 1rem; /* Espacement entre les boutons et la barre */
+    gap: 1rem; /* Espacement entre boutons barre */
   }
   
   .carousel-btn {
@@ -460,20 +460,20 @@ body{
     cursor: pointer;
   }
 
-  /* Style par défaut pour les flèches */
+  /* Style flèches */
   .carousel-btn img {
-    width: 30px; /* Taille par défaut des flèches */
+    width: 30px; 
     height: auto;
-    transition: transform 0.3s ease, width 0.3s ease; /* Animation pour agrandir les flèches au survol */
+    transition: transform 0.3s ease, width 0.3s ease; /* Animation survol */
   }
   
   .carousel-btn:hover img {
-    transform: scale(1.2); /* Agrandir légèrement au survol */
+    transform: scale(1.2); /* Agrandir au survol */
   }
     
   
   .progress-bar {
-    flex: 1; /* Permet à la barre de prendre tout l'espace disponible entre les flèches */
+    flex: 1; /* barre de prend tout l'espace entre les flèches */
     height: 5px;
     background-color: #ffffff65;
     border-radius: 20px;
@@ -482,7 +482,7 @@ body{
 
   }
   
-  .progress {
+  .progress { /* barre de progession qui passe sur la progress bar */
     width: 0%;
     height: 100%;
     background-color: #ffffff;
@@ -491,25 +491,24 @@ body{
 
 
   .left-btn {
-    transform: scaleX(-1); /* Inversion horizontale */
+    transform: scaleX(-1); /* Inversion */
   }
 
 
   .grilleTitreProgressionBar {
-    display: grid;
+    display: grid; /*  grille */
     grid-template-areas: 
         "actus bonsplans"
         "text   progress";
-    grid-template-columns: 1fr 2.5fr; /* Deux colonnes égales */
+    grid-template-columns: 1fr 2.5fr; /* Deux colonnes */
     grid-template-rows: auto auto; /* Deux lignes automatiques */
     width: 90%;
-    gap: 10px; /* Espacement entre les éléments */
+    gap: 10px; /* gap entre les éléments */
 }
 
 #ActusTest {
     grid-area: actus;
     margin: 0;
-
     padding-right: 50px;
     font-family: 'Albert Sans', sans-serif; 
     font-weight: bold;
@@ -520,9 +519,9 @@ body{
 #ActuBonsPlan {
     grid-area: bonsplans;
 
-    display: grid; /* Assure un comportement de grille */
-    align-items: center; /* Centre verticalement tout le contenu */
-    text-align: right; /* Aligne le texte à droite */
+    display: grid; /* grille */
+    align-items: center; /* Centre verticalement */
+    text-align: right; /* Aligne texte à droite */
 
 }
 
@@ -546,12 +545,14 @@ body{
     font-family: 'Albert Sans', sans-serif; 
     font-weight: bold;
     font-size: 65px; 
-    color: transparent; 
+    color: transparent; /* pas de couleur car on prend que la bordure */
     -webkit-text-stroke: 2px #ffffff; /* Largeur et couleur de la bordure */
 }
 
+/* responsive */
 @media (max-width : 1024px) {
 
+    /* adjustement taille pour petit ecrans */
     .carousel-container {
         padding: 100px 0;
 
@@ -573,6 +574,8 @@ body{
 
 @media (max-width : 900px) {
 
+    /* adjustement taille pour petit ecrans */
+
     #BonPlanText {
         font-size: 25px; 
     }
@@ -587,6 +590,8 @@ body{
 }
 
 @media (max-width : 500px) {
+
+    /* adjustement taille pour petit ecrans */
 
     #BonPlanText {
         font-size: 10px; 
@@ -603,12 +608,9 @@ body{
     }
 }
 
-
-
-  
   @media (max-width: 1199px) and (min-width: 478px) {
     .carousel img {
-      max-width: calc(100% / 3 - 0.67rem); /* 3 images avec gap */
+      max-width: calc(100% / 3 - 0.67rem); /* afficher seulement 3 images avec gap */
     }
 
     .carousel-btn img {
@@ -617,13 +619,14 @@ body{
 }
   @media (max-width: 479px) {
     .carousel img {
-      max-width: calc(100% / 2 - 0.5rem); /* 2 images avec gap */
+      max-width: calc(100% / 2 - 0.5rem); /* afficher 2 images avec gap */
     }
 
+    /* adjustement taille pour petit ecrans */
     .carousel-btn img {
-        width: 20px; /* Taille réduite pour les écrans plus petits */
-      }
+        width: 20px; 
   }
+}
   
 
 
