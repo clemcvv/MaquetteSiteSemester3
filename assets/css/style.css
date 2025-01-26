@@ -630,6 +630,10 @@ body{
 
 /* Séparation espace de travaille */
 
+/*<!-- ------------------------------------------------------>
+  <!-- ------------- CSS Shopping Selection ----------------->
+  <!-- ------------------------------------------------------>*/
+
 .shopping-selection{
     margin-left: auto;
     margin-right: auto;
@@ -649,11 +653,10 @@ body{
 
 .selection-head button{
     margin-top: auto;
-    
     padding: 10px;
     background-color: white;
     color: #E82723;
-    border: none;
+    border: hidden;
     border-radius: 10px;
     font-size: 14px;
     font-weight: bold;  
@@ -667,7 +670,7 @@ body{
 .selection-button button{
     color: white;
     width: 150px;
-    height: 150px;
+    aspect-ratio: 1/1;
     margin: 2%;
     border-style: solid;
     border-radius: 10px;
@@ -680,6 +683,12 @@ body{
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.selection-button img{
+    width: 70%;
+    aspect-ratio: 1/1;
+}
+
+
 .selection-button button:hover{
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -687,7 +696,7 @@ body{
 }
 
 .selection-texte{
-    font-size: 28px;
+    font-size: clamp(10px, 3vw, 28px);
 }
 
 .redBackground{
