@@ -13,7 +13,7 @@
 
 
 :root {
-    --background-color: hwb(1 14% 9%);
+    --background-color: #e82724;
 }
 
 body{
@@ -408,6 +408,33 @@ body{
     }
 
 }
+
+/*<!-- ------------------------------------------------------>
+  <!-- ------------------- CSS ICONES ----------------------->
+  <!-- ------------------------------------------------------>*/
+
+#fondIconesGenerales {
+    background-color: var(--background-color);
+    padding-top: 100px;
+    margin: 0;
+    width: 100%;
+}
+
+#selection-button-Icones-generales button {
+    background-color: transparent ;
+}
+
+#selection-button-Icones-generales button:hover {
+    color: black;
+    background-color: white;
+}
+
+#selection-button-Icones-generales button:hover img {
+    filter: grayscale(100%) brightness(0);
+}
+
+/* le reste du css des icones se situes tout en bas pour les icones shopping selection */
+
 
 /*<!-- ------------------------------------------------------>
   <!-- ------------------- CSS CAROUSEL --------------------->
