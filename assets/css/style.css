@@ -677,7 +677,7 @@ body{
     display: flex;
     justify-content: space-between;
     text-align: left;
-    font-size: 200%;
+    font-size: clamp(16px, 4vw, 40px);
     
 }
 
